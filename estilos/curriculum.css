@@ -1,0 +1,73 @@
+/*012*/
+nav li:nth-child(3) {
+    background-color: #E8D23B;
+    color: white;
+}
+
+/*001*/
+aside {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: stretch;
+}
+
+/*002*/
+aside li {
+    list-style-type: none;
+    padding: 0em;
+    margin: 0em 0em 0.1em 0em;
+}
+
+/*002*/
+aside img {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+/*001*/
+main {
+    display: grid;
+    grid-auto-rows: minmax(8em, auto);
+    grid-column-gap: 1em;
+}
+
+main section {
+    margin: 1em;
+}
+
+/*003*/
+main section img {
+    width: 10em;
+    height: auto;
+    border-radius: 10%;
+}
+
+@media (max-width: 70em) {
+
+    /*001*/
+    main {
+        grid-template-columns: 5fr 0.5fr;
+    }
+
+    /*001*/
+    main aside {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+}
+
+@media (min-width: 70em) {
+
+    /*001*/
+    main {
+        grid-template-columns: 5fr 5fr 0.5fr;
+        /*Propiedad que se redefine de @media (max-width: 70em)*/
+    }
+
+    /*001*/
+    main aside {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        /*Propiedades que se redefine de @media (max-width: 70em)*/
+    }
+}
